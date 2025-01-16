@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    // MARK: - Override func
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
 
     }
     
+    // MARK: - IB Action s
     @IBAction func sliderAction(_ sender: UISlider){
         setColor()
         
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Private func
     private func setColor(){
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
